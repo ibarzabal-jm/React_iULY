@@ -13,7 +13,7 @@ _En desarrollo_
 
 _Este proyecto se realizó con las siguientes herramientas:_
 
-* [React.Js] (https://es.reactjs.org/) - Liberería para el desarrollo del Frontend.
+* [React.Js] - Liberería para el desarrollo del Frontend.
 * [Bootstrap](https://react-bootstrap.github.io/) -Darle estilo a la página.
 * [MDBootstrap](https://mdbootstrap.com/docs/react/) - Darle un estilo a la página.
 * [Node.Js] - Para el backend.
