@@ -1,0 +1,8 @@
+.imagen-servicio{
+      background-image: url("../images/ultimas_visitas.jpeg");
+
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-position: center;
+  }
+

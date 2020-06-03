@@ -1,0 +1,7 @@
+.fondo-nuestro-equipo{
+       min-width: 100vh;
+      background-image: url("../images/limpiar.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-position: center;
+  }
