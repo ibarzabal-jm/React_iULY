@@ -43,6 +43,9 @@ const ConfigurationUser = (props) => {
                 </Col>
                 <Col sm={9}>
                 <Tab.Content> 
+                    <Tab.Pane eventKey="tercero">
+                        <TarjetaiULY usuario = {props.user}></TarjetaiULY>
+                    </Tab.Pane>
                     <Tab.Pane eventKey="datosPersonales">
                         <FormularioDatosPersonales user={props.user} />
                     </Tab.Pane>
