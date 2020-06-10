@@ -34,7 +34,6 @@ router.get('/:id', (req,res) => {
 router.put('/:id', (req,res) =>{
     let sql= `UPDATE usuarios
                  SET usuario_nacimiento   = ?,
-                     direccion_id         = ?,
                      usuario_nacionalidad = ?,
                      usuario_celular      = ?,
                      usuario_dni_verificado = ?  `;
@@ -42,7 +41,29 @@ router.put('/:id', (req,res) =>{
                     req.body.nacimiento,
                     req.body.nacionalidad,
                     req.body.celular,
+
                 ];
+
+
+    cnn.query(sql, values,
+        function (err , result, fields){
+            let respuesta;
+
+            if (err){
+                respuesta = {
+                                status : 'error',
+                                message : 'Error al modificar la información del usuario'
+                            }
+            }else{
+                respuesta = {
+                                status: 'ok',
+                                message: 'Usuario Modificado'
+                            }
+            }
+
+            res.json(respuesta);
+
+        })
 });
 
 
