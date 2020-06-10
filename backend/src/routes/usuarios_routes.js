@@ -42,7 +42,6 @@ router.put('/:id', (req,res) =>{
                     req.body.nacimiento,
                     req.body.nacionalidad,
                     req.body.celular,
-
                 ];
 
 
@@ -52,7 +51,7 @@ router.put('/:id', (req,res) =>{
     }
 
     sqlUpdate += ' WHERE usuario_id = ?';
-    values.push(req.params.id);
+    values.push(req.session.userId);
 
 
     cnn.query(sqlUpdate, values,
@@ -72,6 +71,7 @@ router.put('/:id', (req,res) =>{
             }
 
             console.log(req.body);
+            console.log(values);
             res.json(respuesta);
 
         })
