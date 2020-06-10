@@ -16,9 +16,7 @@ const FormularioFoto=( props ) =>{
         setPreviewFoto(URL.createObjectURL(event.target.files[0]));
     }
 
-    useEffect(
-        ()=>{
-
+    const cargarFoto = () => {
             if (props.usuario){
                 
                 fetch(`http://localhost:8888/usuarios/` + props.usuario.id).then(
@@ -32,8 +30,9 @@ const FormularioFoto=( props ) =>{
             }else{
 
             }
-        }, []
-    )
+    }
+
+    useEffect(  cargarFoto   , []  );
 
 
 
