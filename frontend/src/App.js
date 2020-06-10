@@ -142,7 +142,7 @@ function App() {
          />
           
 
-          <Redirect to= { { pathname= '/' } } />
+          <Redirect to= { { pathname: '/' } } />
 
 
         </Switch>
