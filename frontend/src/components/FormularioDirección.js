@@ -15,8 +15,6 @@ const FormularioDireccion=() =>{
                 <MDBCol size='8'>
                      <form>
 
-                         
-
                         <select className="custom-select">
                                 <option>Ciudad:</option>
                                 <option value="1">Ciudad Autónoma de Buenos Aires</option>
