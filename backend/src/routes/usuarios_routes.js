@@ -32,7 +32,7 @@ router.get('/:id', (req,res) => {
 } );
 
 router.put('/:id', (req,res) =>{
-    let sql= `UPDATE usuarios
+    let sqlUpdate= `UPDATE usuarios
                  SET usuario_nacimiento   = ?,
                      usuario_nacionalidad = ?,
                      usuario_celular      = ?,
@@ -45,7 +45,9 @@ router.put('/:id', (req,res) =>{
                 ];
 
 
-    cnn.query(sql, values,
+    sqlUpdate += ' WHERE usuario_id = ?';
+    values.push(req.params.id);
+    cnn.query(sqlUpdate, values,
         function (err , result, fields){
             let respuesta;
 
