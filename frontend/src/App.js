@@ -15,7 +15,8 @@ import RegistroCliente from './components/RegistroCliente'
 import{
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 import Espaciado from './components/Espaciado';
@@ -141,7 +142,7 @@ function App() {
          />
           
 
-
+          <Redirect to= { { pathname= '/' } } />
 
 
         </Switch>
