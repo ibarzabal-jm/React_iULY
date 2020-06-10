@@ -94,12 +94,28 @@ const Navbar = (props) => {
                                                         </MDBDropdownToggle>
                                                         <MDBDropdownMenu className="dropdown-default" right>
                                                             <MDBLink to="/miCuenta"><MDBDropdownItem>Mi Cuenta</MDBDropdownItem></MDBLink>
-                                                            <MDBLink to="/miCuenta"><MDBDropdownItem>Mis Pedidos</MDBDropdownItem></MDBLink>
-                                                            <MDBLink to="/miCuenta"><MDBDropdownItem>Mis Favoritos</MDBDropdownItem></MDBLink>
+                                                            {
+                                                                (props.user.tipo === 'Trabajador')
+                                                                    ?
+
+                                                                        <>
+                                                                            <MDBLink to="/misCobros"><MDBDropdownItem>Mis Cobros</MDBDropdownItem></MDBLink>
+                                                                            <MDBLink to="/misVisitas"><MDBDropdownItem>Mis Visitas</MDBDropdownItem></MDBLink>
+                                                                            <MDBLink to="/miCalendario"><MDBDropdownItem>Mi Calendario</MDBDropdownItem></MDBLink>
+                                                                        </>
+
+                                                                    :
+
+                                                                        <>
+                                                                            <MDBLink to="/miCuenta"><MDBDropdownItem>Mis Pedidos</MDBDropdownItem></MDBLink>
+                                                                            <MDBLink to="/miCuenta"><MDBDropdownItem>Mis Favoritos</MDBDropdownItem></MDBLink>
+                                                                        </>
+                                                            }
+                                                            
                                                             <MDBLink to="/miCuenta"><MDBDropdownItem>Mi Historial</MDBDropdownItem></MDBLink>
                                                             <MDBLink to="/miCuenta"><MDBDropdownItem>Ayuda en línea</MDBDropdownItem></MDBLink>
                                                             <MDBDropdownItem divider />
-                                                            <MDBDropdownItem onClick={props.handleLogout}>Cerrar sesion</MDBDropdownItem>
+                                                            <MDBDropdownItem onClick={props.handleLogout}> Cerrar sesion</MDBDropdownItem>
                                                         </MDBDropdownMenu>
                                                     </MDBDropdown>
                                                 </MDBNavItem>
