@@ -16,7 +16,12 @@ router.get('/', (req,res) => {
 } );
 
 router.get('/:id', (req,res) => {
-    cnn.query("SELECT * FROM usuarios WHERE usuario_id = " + req.params.id,
+
+    sql = `SELECT *, DATE_FORMAT(usuario_nacimiento, "%Y-%m-%d") AS nacimiento
+            FROM usuarios
+            WHERE (usuario_id = `+ req.params.id +` )`
+
+    cnn.query(sql,
         function(err, result, fields){
                 if (err) throw err;
 
