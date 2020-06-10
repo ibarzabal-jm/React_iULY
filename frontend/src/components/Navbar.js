@@ -60,19 +60,6 @@ const Navbar = (props) => {
                                                     <MDBLink style={{borderRadius: '30px'}} > Iniciar sesión </MDBLink>
                                             </MDBNavItem>
 
-                                            <MDBNavItem>
-                                                <MDBDropdown>
-                                                    <MDBDropdownToggle nav caret color="default">
-                                                    <span className="mr-2">Dropdown</span>
-                                                    </MDBDropdownToggle>
-                                                    <MDBDropdownMenu color="default" basic>
-                                                    <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                                                    <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                                                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                                                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                                                    </MDBDropdownMenu>
-                                                </MDBDropdown>
-                                            </MDBNavItem>
                                         </>
                                     
                                     :
