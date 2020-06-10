@@ -47,10 +47,10 @@ const ConfigurationUser = (props) => {
                         <TarjetaiULY usuario = {props.user}></TarjetaiULY>
                     </Tab.Pane>
                     <Tab.Pane eventKey="datosPersonales">
-                        <FormularioDatosPersonales user={props.user} />
+                        <FormularioDatosPersonales usuario={props.user} />
                     </Tab.Pane>
                     <Tab.Pane eventKey="direccion">
-                        <FormularioDireccion user={props.user} />
+                        <FormularioDireccion usuario={props.user} />
                     </Tab.Pane>
                     <Tab.Pane eventKey="foto">
                         <FormularioFoto usuario={props.user} />
