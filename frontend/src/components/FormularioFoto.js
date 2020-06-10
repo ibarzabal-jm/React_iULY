@@ -26,13 +26,10 @@ const FormularioFoto=( props ) =>{
                         setPreviewFoto(data.usuario_imagen);
                     }
                 )
-
-            }else{
-
             }
     }
 
-    useEffect(  cargarFoto   , []  );
+    useEffect(  cargarFoto  , []  );
 
 
 
