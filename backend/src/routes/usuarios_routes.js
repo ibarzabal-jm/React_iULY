@@ -33,25 +33,29 @@ router.get('/:id', (req,res) => {
 
 router.put('/:id', (req,res) =>{
 
-    
-    let sqlUpdate= `UPDATE usuarios
+    let sqlUpdate;
+    let values;
+    if(req.session.userId){
+
+        sqlUpdate= `UPDATE usuarios
                         SET usuario_nacimiento   = ?,
                             usuario_nacionalidad = ?,
                             usuario_celular      = ? `;
-    let values =[
+        values =[
                     req.body.nacimiento,
                     req.body.nacionalidad,
                     req.body.celular,
                 ];
-
-
-    if(req.body.verificado){
-        sqlUpdate += ', usuario_dni_verificado = ?';
-        values.push(req.body.verificado);
+    
+    
+        if(req.body.verificado){
+            sqlUpdate += ', usuario_dni_verificado = ?';
+            values.push(req.body.verificado);
+        }
+    
+        sqlUpdate += ' WHERE usuario_id = ?';
+        values.push(req.session.userId);
     }
-
-    sqlUpdate += ' WHERE usuario_id = ?';
-    values.push(req.session.userId);
 
 
     cnn.query(sqlUpdate, values,
@@ -70,8 +74,6 @@ router.put('/:id', (req,res) =>{
                             }
             }
 
-            console.log(req.body);
-            console.log(values);
             res.json(respuesta);
 
         })
