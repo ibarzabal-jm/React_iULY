@@ -31,7 +31,7 @@ const FormularioDatosPersonales=( props ) =>{
                         nacionalidad:   data.usuario_nacionalidad,
                         dni:            data.usuario_dni,
                         celular:        data.usuario_celular,
-                        nacimiento:     data.usuario_nacimiento,
+                        nacimiento:     data.nacimiento,
                     })
                 }
             )
@@ -52,7 +52,7 @@ const FormularioDatosPersonales=( props ) =>{
 
     const handleSave = (event) =>{
        
-        console.log('Enviando datos' + datos.nombre + ' ' +datos.apellido);
+        console.log('Enviando datos' + datos.nacimiento);
     }
 
     return(
