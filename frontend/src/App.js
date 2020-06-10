@@ -93,6 +93,19 @@ function App() {
                     /> } 
           />
 
+
+          { usuario && 
+                    <Route exact path="/micuenta"
+                            children={ 
+                              <>
+                                <Espaciado />
+                                <UserConfig user={usuario}/>
+                                
+                              </>
+                              } 
+                    />
+          }
+
           <Route exact path="/listadoiULY"
                   children={ 
                   <>
@@ -121,15 +134,7 @@ function App() {
           />
 
           
-          <Route exact path="/micuenta"
-                          children={ 
-                            <>
-                              <Espaciado />
-                              <UserConfig user={usuario}/>
-                              
-                            </>
-                            } 
-         />
+          
 
          <Route exact path="/calendario"
                           children={ 
