@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { MDBContainer, MDBCol, MDBIcon, MDBRow, MDBBtn} from 'mdbreact';
 import Form from 'react-bootstrap/Form';
 import "../styles/FormularioRegistro.css";
 
 
-const FormularioDatosPersonales=() =>{
+const FormularioDatosPersonales=( props ) =>{
 
     const [datos, setDatos] = useState({
-        nombre:         '',
-        apellido:       '', 
+        nombre:         'Juan',
+        apellido:       'Salame', 
         nacionalidad:   '',
         dni:            '',
         celular:        '',
@@ -16,6 +16,23 @@ const FormularioDatosPersonales=() =>{
 
 
     });
+
+    const cargarDatos = () => {
+        if (props.usuario){
+            
+            fetch(`http://localhost:8888/usuarios/` + props.usuario.id).then(
+                response => response.json()
+            ).then(
+                data =>{
+                    
+                }
+            )
+    
+        }
+
+    }
+
+    useEffect( cargarDatos , [] );
 
     const handleInputChange = (event) => {
  
@@ -45,6 +62,8 @@ const FormularioDatosPersonales=() =>{
                             <Form.Control type="text"
                                           name="nombre"
                                           onChange={handleInputChange}
+                                          value = {datos.nombre}
+                                          
                                          
                                        
                             />
@@ -56,6 +75,7 @@ const FormularioDatosPersonales=() =>{
                             <Form.Control type="text"
                                           name="apellido"
                                           onChange={handleInputChange}
+                                          value = {datos.apellido}
                                         
                             />
                         </Form.Group>
@@ -67,6 +87,7 @@ const FormularioDatosPersonales=() =>{
                             <Form.Control type="text"
                                           name="nacionalidad"
                                           onChange={handleInputChange}
+                                          value = { datos.nacionalidad }
                             />
                         </Form.Group>
                         
@@ -78,6 +99,7 @@ const FormularioDatosPersonales=() =>{
                             <Form.Control type="text"
                                           name="Dni"
                                           onChange={handleInputChange}
+                                          value = { datos.dni }
                             />
                         </Form.Group>
 
@@ -87,6 +109,7 @@ const FormularioDatosPersonales=() =>{
                             <Form.Control type="number"
                                           name="celular"
                                           onChange={handleInputChange}
+                                          value = { datos.celular }
                             />
                         </Form.Group>
 
@@ -96,6 +119,7 @@ const FormularioDatosPersonales=() =>{
                             <Form.Control type="date"
                                           name="nacimiento"
                                           onChange={handleInputChange}
+                                          value = { datos.nacimiento }
                             />
                         </Form.Group>
                         
