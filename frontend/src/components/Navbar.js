@@ -93,7 +93,7 @@ const Navbar = (props) => {
                                                             <MDBIcon icon="user" mr="6">  {props.user.nombre} </MDBIcon>
                                                         </MDBDropdownToggle>
                                                         <MDBDropdownMenu className="dropdown-default" right>
-                                                            <MDBDropdownItem> Mi Cuenta </MDBDropdownItem>
+                                                            <MDBDropdownItem> <MDBLink to="/miCuenta"> Mi Cuenta</MDBLink></MDBDropdownItem>
                                                             <MDBDropdownItem href="#!">Mi Historial</MDBDropdownItem>
                                                             <MDBDropdownItem divider />
                                                             <MDBDropdownItem onClick={props.handleLogout}>Cerrar sesion</MDBDropdownItem>
