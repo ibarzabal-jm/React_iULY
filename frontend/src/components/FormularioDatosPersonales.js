@@ -7,8 +7,8 @@ import "../styles/FormularioRegistro.css";
 const FormularioDatosPersonales=( props ) =>{
 
     const [datos, setDatos] = useState({
-        nombre:         'Juan',
-        apellido:       'Salame', 
+        nombre:         '',
+        apellido:       '', 
         nacionalidad:   '',
         dni:            '',
         celular:        '',
@@ -24,7 +24,15 @@ const FormularioDatosPersonales=( props ) =>{
                 response => response.json()
             ).then(
                 data =>{
-                    
+                    setDatos({
+                        ...datos,
+                        nombre : data.usuario_nombre,
+                        apellido: data.usuario_apellido,
+                        nacionalidad:   data.usuario_nacionalidad,
+                        dni:            data.usuario_dni,
+                        celular:        data.usuario_celular,
+                        nacimiento:     data.usuario_nacimiento,
+                    })
                 }
             )
     
