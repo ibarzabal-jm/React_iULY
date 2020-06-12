@@ -35,7 +35,14 @@ router.get('/user/:id', (req,res) => {
 
             if( err ){
 
+                respuesta = {
+                                status:'error',
+                                message:'No se pudo enviar la reserva'
+                            }
+            }else{
+                res.json(result[0]);
             }
+            
         }
         
     )
