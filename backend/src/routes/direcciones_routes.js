@@ -18,11 +18,23 @@ router.post('/', (req, res) => {
 
     let sql = ``;
 
-    cnn.query(sql, function (err, result, fields){
+    let values;
+    cnn.query(sql, values, function (err, result, fields){
                 
-                if ( err ) throw err;
+                let respuesta;
+                if ( err ){
+                    respuesta = {
+                                    status:'error',
+                                    message:'No se pudo agregar la dirección'
+                                }
+                }else{
+                    respuesta = {
+                                    status:'ok',
+                                    message:'Se agregó la dirección correctamente'
+                                }
+                }
 
-                res.send('Dirección Agregada');
+                res.json(respuesta);
 
             }
     );
