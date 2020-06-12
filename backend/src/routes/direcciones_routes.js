@@ -28,7 +28,18 @@ router.get('/:id', (req,res) => {
 });
 
 
-//
+//obtener direccion segun el usuario
+router.get('/user/:id', (req,res) => {
+    let sql = ``;
+
+    cnn.query(sql, 
+        function (err, result, fields){
+            if (err) throw err;
+
+            res.json(result[0]);
+        }
+    );
+});
 
 
 router.post('/', (req, res) => {
