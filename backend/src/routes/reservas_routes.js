@@ -6,13 +6,13 @@ const router = express.Router();
 
 router.get('/', (req, res) =>{
     let sql = `SELECT *
-                FROM reservas`
+                FROM reservas`;
 
     cnn.query(sql,
         function(err,result,fields){
             
             let respuesta;
-            if (err){
+            if( err ){
                 respuesta = {
                                 status:'error',
                                 message:'No se pudo enviar las reservas'
@@ -23,6 +23,22 @@ router.get('/', (req, res) =>{
 
         }
     );
+})
+
+router.get('/user/:id', (req,res) => {
+    let sql = `SELECT * 
+                FROM reservas`;
+
+    cnn.query(sql,
+        function(err,result,fields){
+            let respuesta;
+
+            if( err ){
+
+            }
+        }
+        
+    )
 })
 
 
