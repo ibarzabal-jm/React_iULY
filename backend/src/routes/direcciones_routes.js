@@ -18,6 +18,11 @@ router.get('/', (req,res) => {
 router.get('/:id', (req,res) => {
     let sql = ``;
 
+
+
+
+
+    
     cnn.query(sql, 
         function (err, result, fields){
             if (err) throw err;
