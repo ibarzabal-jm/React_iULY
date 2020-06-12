@@ -14,6 +14,23 @@ router.get('/', (req,res) => {
 } );
 
 
+//obtener direcciones segun la id
+router.get('/:id', (req,res) => {
+    let sql = ``;
+
+    cnn.query(sql, 
+        function (err, result, fields){
+            if (err) throw err;
+
+            res.json(result[0]);
+        }
+    );
+});
+
+
+//
+
+
 router.post('/', (req, res) => {
 
     let sql = ``;
@@ -46,5 +63,5 @@ router.post('/', (req, res) => {
 
 
 
-
 module.exports = router;
+
