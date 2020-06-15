@@ -90,7 +90,8 @@ router.put('/:id', (req, res) => {
                                 }
                 }else{
                     respuesta = {
-                                   
+                                    status:'ok',
+                                    message:'Se agregó la dirección correctamente'
                                 }
                 }
 
