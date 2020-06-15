@@ -75,6 +75,33 @@ router.post('/', (req, res) => {
 
 });
 
+router.put('/:id', (req, res) => {
+
+    let sql = ``;
+
+    let values;
+    cnn.query(sql, values, function (err, result, fields){
+                
+                let respuesta;
+                if ( err ){
+                    respuesta = {
+                                    status:'error',
+                                    message:'No se pudo cambiar la dirección'
+                                }
+                }else{
+                    respuesta = {
+                                   
+                                }
+                }
+
+                res.json(respuesta);
+
+            }
+    );
+
+
+});
+
 
 
 
