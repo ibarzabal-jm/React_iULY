@@ -23,5 +23,5 @@ _Este proyecto se realizó con las siguientes herramientas:_
 
 ## Autor ✒️
 
-
 * **Juan Manuel Ibarzabal Salles** - *Fullstack* - [ibarzabal-jm](https://github.com/ibarzabal-jm)
+
