@@ -23,6 +23,7 @@ const usuariosRoutes = require('./routes/usuarios_routes');
 const mucamaRoutes = require('./routes/mucama_routes');
 const clienteRoutes = require('./routes/cliente_routes');
 const pedidosRoutes = require('./routes/pedidos_routes');
+const tareas = require('./routes/tareas_mucama');
 
 //ruta de fotos
 const fotoRoutes = require('./routes/foto_usuario');
@@ -67,7 +68,8 @@ app.use('/perfilFoto',auth, fotoRoutes);
 app.use('/usuarios',  usuariosRoutes);
 app.use('/clientes',  clienteRoutes);
 app.use('/mucamas', mucamaRoutes);
-app.use('/pedidos', pedidosRoutes)
+app.use('/pedidos', pedidosRoutes);
+app.use('/tareas', tareas);
 
 
 app.listen(8888, () => {console.log('Escuchando a iULY...'); } );
