@@ -11,7 +11,7 @@ _Cosas que faltan:_
 * Crear una cita (back)
 * Realizar un pedido (back)
 * Conectarse con el servicio
-
+* Configurar sweet alert 2
 
 _Cosas hechas:_
 * Alta de los usuarios
