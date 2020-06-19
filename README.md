@@ -2,10 +2,32 @@
  Proyecto Final de Comunidad IT, página de empleadas domésticas
 
 
-## Comenzando 🚀
+## En desarrollo 🚀
 
-_En desarrollo_
+_Cosas que faltan:_
+* Deploy del proyecto, por el momento solo está el front.
+* Terminar de conectar los formularios. (front)
+* Agregar calendario (front)
+* Crear una cita (back)
+* Realizar un pedido (back)
+* Conectarse con el servicio
 
+
+_Cosas hechas:_
+* Alta de los usuarios
+* Subir imágenes
+* Crear perfil
+* Carta de presentación
+* Redirección
+* Base de datos
+* Back con express
+* Traer listado del back
+* Inicio
+* Footer
+* Tarjeta iuly
+* Panel de Usuario
+* Login
+* Navbar responsive
 
 
 
