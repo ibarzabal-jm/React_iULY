@@ -28,16 +28,16 @@ const ConfigurationUser = (props) => {
                 <Nav variant="pills" className="flex-column">
 
                     <Nav.Item>
-                        <Nav.Link eventKey="datosPersonales"> <i className="fas fa-cog mr-2"></i> Tus datos Personales</Nav.Link>
+                        <Nav.Link eventKey="tercero">Tu tarjeta de Perfil en iUlY</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link eventKey="datosPersonales"> <i className="fas fa-cog mr-2"></i>Tus datos Personales</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="direccion">Tu Dirección</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="foto">Foto de Perfil</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="tercero">Configura tu</Nav.Link>
                     </Nav.Item>
                 </Nav>
                 </Col>
