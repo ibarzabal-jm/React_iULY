@@ -4,7 +4,7 @@ import TarjetaiULY from './TarjetaiULY';
 
 const ListadoiULY = () =>{
 
-    const [ mucamas, setMucamas ] = useState([])
+    const [ mucamas, setMucamas ] = useState([]);
 
     useEffect ( ()=>{
                     fetch('http://localhost:8888/mucamas').then(
@@ -13,9 +13,12 @@ const ListadoiULY = () =>{
                         data => {
                             setMucamas(data);
                         }
-                    );
+                    )
+                    
+                    ;
                 } , []
     )
+
 
     return(
         <>
@@ -25,6 +28,7 @@ const ListadoiULY = () =>{
 
                     {
                         mucamas.map( mucama => {
+
                                             return(
                                                 
                                                 <TarjetaiULY    id={mucama.mucama_id}
@@ -34,6 +38,7 @@ const ListadoiULY = () =>{
                                                                 edad={mucama.nacimiento}
                                                                 alta={mucama.alta}
                                                                 modalidad="Con retiro"
+
                                 
                                                                 limpieza="Limpieza"
                                                                 cocina="Cocina básica"
