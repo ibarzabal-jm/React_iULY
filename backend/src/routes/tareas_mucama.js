@@ -4,11 +4,10 @@ const conexion = require('../cnn');
 
 
 router.get('/:user',(req, res) => {
-    let sql = ` SELECT usuarios.usuario_nombre, usuarios.usuario_apellido, usuarios.usuario_dni, mucamas.mucama_id, tareas.tarea_nombre, tareas.tarea_precio
-                FROM usuarios,mucamas,tareas, mucamas_tareas
+    let sql = ` SELECT mucamas.mucama_id, tareas.tarea_nombre, tareas.tarea_precio
+                FROM mucamas,tareas, mucamas_tareas
                 WHERE mucamas_tareas.mucama_id = ${req.params.user} 
-                AND mucamas_tareas.tarea_id = tareas.tarea_id 
-                AND usuarios.usuario_id = mucamas.mucama_usuario_id 
+                AND mucamas_tareas.tarea_id = tareas.tarea_id  
                 AND mucamas_tareas.mucama_id = mucamas.mucama_id
     `
 
