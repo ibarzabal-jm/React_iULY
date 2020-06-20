@@ -50,12 +50,14 @@ export default (props) => {
       <MDBModalBody className="mx-3" >
         <form className="mx-3 grey-text">
           
-          <MDBInput label="Ingresa tu mail" labelClass="blue-text" icon="envelope" group iconClass="blue-text"  type="email" 
+          <MDBInput label="Ingresa tu mail" labelClass="blue-text" 
+                    icon="envelope" group iconClass="blue-text"  type="email" 
                     value={mailUsuario} 
                     onChange={handleMailChange}
             />
 
-          <MDBInput label="Tu contraseña" labelClass="blue-text" icon="lock" group iconClass="blue-text" type="password"
+          <MDBInput label="Tu contraseña" labelClass="blue-text" 
+                    icon="lock" group iconClass="blue-text" type="password"
                     value={passwordUsuario}
                     onChange={handlePasswordChange}
           />
